@@ -26,16 +26,17 @@ public class LoginTest extends Testbase {
 		
 
 	}
-//@Test
+ @Test
 //public void verifyloginWithCaptcha() throws InterruptedException
 	//{
 	//
 //		String password = props.getProperty("password");
 //	}
-	@Test(dataProvider = "setdata",dataProviderClass = Utils.class)
-	public void verifyurl(String username,String password) throws InterruptedException {
-
-	lg.validateHomepage(username,password);
+	//@Test(dataProvider = "setdata",dataProviderClass = Utils.class)
+	public void verifyurl()
+	{
+		//lg.validateLogin(username,password);
+		lg.validateLogin();
 		String url=driver.getCurrentUrl();
 		Assert.assertEquals("http://e-quarz.com/", url);
 	}
