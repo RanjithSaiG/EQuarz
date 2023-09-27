@@ -52,7 +52,7 @@ public class Testbase {
 		}
 
 		driver.manage().window().maximize();
-		driver.get(props.getProperty("url2"));
+		driver.get(props.getProperty("url"));
 		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
 		//driver.get(props.getProperty("url"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));

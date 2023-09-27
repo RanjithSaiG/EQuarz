@@ -7,14 +7,18 @@ import java.io.FileInputStream;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
+
+import com.pageobjects.Homepage;
 
 public class Utils {
 @DataProvider
 	
 	public String[][] setdata() throws IOException
 	{
-		File file=new File("C:\\Users\\HP\\eclipse-workspace\\com.equarz\\src\\main\\java\\com\\testdata\\E-Quraz Credentals.xlsx");
+		File file=new File("C:\\Users\\HP\\git\\repository3\\com.equarz\\src\\main\\java\\com\\testdata\\E-Quraz Credentals.xlsx");
 		FileInputStream stream=new FileInputStream(file);
 		XSSFWorkbook workbook=new XSSFWorkbook(stream)
 ;
@@ -31,6 +35,10 @@ public class Utils {
 			
 		}
 		return data;
-		
 	}
+public static Homepage dropdown(WebElement value, String text) {
+	Select sel = new Select(value);
+	sel.selectByValue(text);
+    return new Homepage();	
+}
 }

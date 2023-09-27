@@ -1,5 +1,7 @@
 package com.pageobjects;
 
+import javax.swing.JOptionPane;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,9 +14,9 @@ public class logion_functionality extends Testbase {
 	WebElement user;
 	@FindBy(id="si-password")
 	WebElement pass;
-	//String str=JOptionPane.showInputDialog("Enter captcha");
-//	@FindBy(xpath="//input[@name='default_captcha_value']")
-//	WebElement element;
+	String str=JOptionPane.showInputDialog("Enter captcha");
+    @FindBy(xpath="//input[@name='default_captcha_value']")
+	WebElement element;
 	@FindBy(xpath="//button[text()='Sign in']")
 	WebElement signinbtn;
 	//private WebElement captchaInput;
@@ -23,20 +25,20 @@ public class logion_functionality extends Testbase {
 	{
 		PageFactory.initElements(driver, this);
 	}
-	public Homepage validateHomepage(String user1,String password1) throws InterruptedException
+	public void validateLogin()
 	{
-		user.sendKeys(user1);
-		pass.sendKeys(password1);
-	
-		Thread.sleep(10000);
-		//element.sendKeys(str);
+//		user.sendKeys(user1);
+//		pass.sendKeys(password1);
+		user.sendKeys(props.getProperty("username"));
+		pass.sendKeys(props.getProperty("password"));
+
+		//Thread.sleep(10000);
+		
+		element.sendKeys(str);
 		signinbtn.click();
 		
-		return new Homepage();
+	
+	}
 		
 	}
-	public Homepage validateLogin(String username, String password, String captcha) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-}
+	
