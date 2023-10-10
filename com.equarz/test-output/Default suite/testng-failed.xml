@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Testcases.BuynowTest">
+      <class name="com.Testcases.ADDERSTest">
         <methods>
           <include name="initialize"/>
-          <include name="buy"/>
-          <include name="teardown"/>
+          <include name="deleteaddress"/>
+          <include name="addaddress"/>
+          <include name="login"/>
+          <include name="editaddress"/>
         </methods>
-      </class> <!-- com.Testcases.BuynowTest -->
+      </class> <!-- com.Testcases.ADDERSTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
