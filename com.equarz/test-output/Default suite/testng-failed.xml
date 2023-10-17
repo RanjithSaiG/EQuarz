@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Testcases.ADDERSTest">
+      <class name="com.Testcases.Edit_ProfileTestjava">
         <methods>
           <include name="initialize"/>
-          <include name="deleteaddress"/>
-          <include name="addaddress"/>
           <include name="login"/>
-          <include name="editaddress"/>
+          <include name="search"/>
         </methods>
-      </class> <!-- com.Testcases.ADDERSTest -->
+      </class> <!-- com.Testcases.Edit_ProfileTestjava -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
